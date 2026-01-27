@@ -55,36 +55,53 @@ class BusniessCarsApp extends StatelessWidget {
               height: 20,
             ),
 
-            Padding(
-              padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
-
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: ListTile(
+                leading: //FlutterLogo(),
+                Icon(
+                  Icons.phone,
+                  size: 32,
+                  color: Color.fromARGB(255, 94, 43, 43),
                 ),
-                height: 65,
 
-                child: Row(
-                  // mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.phone,
-                        size: 32,
-                        color: Color(0xFF2B475E),
-                      ),
+                title: Text('(+20) 1098311042', style: TextStyle(fontSize: 20)),
+              ),
+            ),
+
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              height: 65,
+
+              child: Row(
+                // mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 8,
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 25),
-                      child: Text(
-                        '(+20) 1098311042',
-                        style: TextStyle(fontSize: 20),
-                      ),
+                    child: Icon(
+                      Icons.phone,
+                      size: 32,
+                      color: Color(0xFF2B475E),
                     ),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text(
+                      '(+20) 1098311042',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ],
               ),
             ),
 
@@ -102,7 +119,7 @@ class BusniessCarsApp extends StatelessWidget {
               child: Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: Icon(
                       Icons.email,
                       size: 32,
@@ -111,13 +128,38 @@ class BusniessCarsApp extends StatelessWidget {
                   ),
 
                   Padding(
-                    padding: EdgeInsets.only(left: 22),
+                    padding: EdgeInsets.only(left: 14),
                     child: Text(
                       'abdallahelghobary@gmail.com',
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ],
+              ),
+            ),
+
+            // Login Button
+            Padding(
+              padding: EdgeInsetsGeometry.only(top: 10),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                height: 50,
+                margin: EdgeInsets.symmetric(horizontal: 139),
+                child: Row(
+                  children: [
+                    // Icon(Icons.logo_dev_sharp),
+                    Padding(
+                      padding: EdgeInsetsGeometry.symmetric(horizontal: 27),
+                      child: Text( 
+                        'Login',
+                        style: TextStyle(fontSize: 30, color: Colors.black),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
